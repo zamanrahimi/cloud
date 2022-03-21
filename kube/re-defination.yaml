@@ -1,0 +1,25 @@
+
+#controller creation in order to create replications 
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels: 
+    app: myapp
+    tier: frontend 
+spec: 
+  template: 
+    metadata:
+      name: myapp-rc
+      labels: 
+        app: myapp
+        tier: frontend 
+    spec: 
+      containers: 
+        - name: nginx-container
+          image: nginx 
+
+    
+
+
+  replicas: 3

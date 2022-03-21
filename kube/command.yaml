@@ -27,3 +27,13 @@ kubectl delete pod nginx
 
 10. how to read yaml file of an image and store it in a specific file like pod.yaml 
 kubectl run redis --image=redis123 --dry-run = client -o yaml > pod.yaml
+
+11. how to edit image name in redis pod 
+
+kubectl edit pod redis
+
+12. create controller
+kubectl create -f re-controller.yal
+13. show number of created controller
+kubectl get replicationcontroller
+
