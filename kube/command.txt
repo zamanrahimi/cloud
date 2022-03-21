@@ -1,0 +1,8 @@
+# command 
+
+1. create a pod by yaml file 
+kubectl create -f pod.yaml
+2. list of the pods 
+kubectl get pods 
+3. description about each pod 
+kubectl describe pod nginx (name of the pod)
