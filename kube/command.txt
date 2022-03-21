@@ -6,3 +6,24 @@ kubectl create -f pod.yaml
 kubectl get pods 
 3. description about each pod 
 kubectl describe pod nginx (name of the pod)
+
+4. run a pod from nginx image 
+kubectl run nginx --image=nginx
+
+5. which image is used to create pod "nginx"
+kubectl describe pod nginx | grep -i image
+
+6. whic nodes are these pods placed on it? 
+kubectl get pods -o wide
+
+7. how many containers are running in a pod
+kubectl get pods nginx
+
+8. how many containers are part of the pod 
+kubectl describe pod nginx
+
+9. how to delete a pod 
+kubectl delete pod nginx
+
+10. how to read yaml file of an image and store it in a specific file like pod.yaml 
+kubectl run redis --image=redis123 --dry-run = client -o yaml > pod.yaml
